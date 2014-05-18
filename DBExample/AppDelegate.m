@@ -64,7 +64,7 @@
     //Sends all your Google Analytic data to Google. The identifier is in DBExample-Info.plist
     [AppAnalytics sharedInstance].optOut = YES;
     NSString *analyticsIdentifier = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"AnalyticsIdentifier"];
-    [[AppAnalytics sharedInstance] trackerWithName:@"Smugchat" trackingId:analyticsIdentifier];
+    [[AppAnalytics sharedInstance] trackerWithName:@"DBExample" trackingId:analyticsIdentifier];
     [AppAnalytics sharedInstance].optOut = NO;//allow for analytics collection
     [AppAnalytics sharedInstance].dispatchInterval = 120;
     [AppAnalytics sharedInstance].trackUncaughtExceptions = YES;
