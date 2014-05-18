@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		711BF20019292B94002D2514 /* AppAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF1F719292B94002D2514 /* AppAnalytics.m */; };
+		711BF20119292B94002D2514 /* AppAnalyticsTrackerVCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF1F919292B94002D2514 /* AppAnalyticsTrackerVCtrl.m */; };
+		711BF20319292BA2002D2514 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 711BF20219292BA2002D2514 /* libGoogleAnalyticsServices.a */; };
+		711BF21A19292BE2002D2514 /* AppConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF20519292BE2002D2514 /* AppConnectionOperation.m */; };
+		711BF21B19292BE2002D2514 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF20719292BE2002D2514 /* AppConstants.m */; };
+		711BF21C19292BE2002D2514 /* AppDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF20919292BE2002D2514 /* AppDateFormatter.m */; };
+		711BF21D19292BE2002D2514 /* AppDebugLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF20B19292BE2002D2514 /* AppDebugLog.m */; };
+		711BF21E19292BE2002D2514 /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF20D19292BE2002D2514 /* AppManager.m */; };
+		711BF21F19292BE2002D2514 /* AppQueryParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF20F19292BE2002D2514 /* AppQueryParameter.m */; };
+		711BF22019292BE2002D2514 /* DataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF21119292BE2002D2514 /* DataAccess.m */; };
+		711BF22119292BE2002D2514 /* DeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF21319292BE2002D2514 /* DeviceUtils.m */; };
+		711BF22219292BE2002D2514 /* GTMStackTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF21519292BE2002D2514 /* GTMStackTrace.m */; };
+		711BF22319292BE2002D2514 /* SettingsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF21719292BE2002D2514 /* SettingsModel.m */; };
+		711BF22419292BE2002D2514 /* UTCDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF21919292BE2002D2514 /* UTCDate.m */; };
+		711BF22719292E79002D2514 /* AppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF22619292E79002D2514 /* AppViewController.m */; };
+		711BF23019292E90002D2514 /* NSData+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF22919292E90002D2514 /* NSData+Category.m */; };
+		711BF23119292E90002D2514 /* NSDictionary+JSONCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF22B19292E90002D2514 /* NSDictionary+JSONCategory.m */; };
+		711BF23219292E90002D2514 /* NSException+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF22D19292E90002D2514 /* NSException+Category.m */; };
+		711BF23319292E90002D2514 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF22F19292E90002D2514 /* NSString+Category.m */; };
 		71225CC11926DAEE00DA1591 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71225CC01926DAEE00DA1591 /* Foundation.framework */; };
 		71225CC31926DAEE00DA1591 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71225CC21926DAEE00DA1591 /* CoreGraphics.framework */; };
 		71225CC51926DAEE00DA1591 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71225CC41926DAEE00DA1591 /* UIKit.framework */; };
@@ -22,28 +41,12 @@
 		71225CED1926DAEE00DA1591 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71225CEB1926DAEE00DA1591 /* InfoPlist.strings */; };
 		71225CEF1926DAEE00DA1591 /* DBExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71225CEE1926DAEE00DA1591 /* DBExampleTests.m */; };
 		7122DB6D1926E6AD009936A5 /* DBExample-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71225CC81926DAEE00DA1591 /* DBExample-Info.plist */; };
-		7122DB7F1926E836009936A5 /* AppAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = 7122DB761926E836009936A5 /* AppAnalytics.m */; };
-		7122DB801926E836009936A5 /* AppAnalyticsTrackerVCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7122DB781926E836009936A5 /* AppAnalyticsTrackerVCtrl.m */; };
-		7122DB821926E848009936A5 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7122DB811926E848009936A5 /* libGoogleAnalyticsServices.a */; };
 		7122DB891926E8B1009936A5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7122DB831926E8B0009936A5 /* CFNetwork.framework */; };
 		7122DB8A1926E8B1009936A5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7122DB841926E8B0009936A5 /* CoreData.framework */; };
 		7122DB8B1926E8B1009936A5 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7122DB851926E8B0009936A5 /* libsqlite3.0.dylib */; };
 		7122DB8C1926E8B1009936A5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7122DB861926E8B0009936A5 /* libz.dylib */; };
 		7122DB8D1926E8B1009936A5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7122DB871926E8B0009936A5 /* Security.framework */; };
 		7122DB8E1926E8B1009936A5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7122DB881926E8B1009936A5 /* SystemConfiguration.framework */; };
-		7122DB931926E90D009936A5 /* NSData+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 7122DB901926E90D009936A5 /* NSData+Category.m */; };
-		7122DB941926E90D009936A5 /* NSException+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 7122DB921926E90D009936A5 /* NSException+Category.m */; };
-		7122DB971926E92C009936A5 /* AppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7122DB961926E92C009936A5 /* AppViewController.m */; };
-		7122DBAC1926E97A009936A5 /* AppConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7122DB991926E97A009936A5 /* AppConnectionOperation.m */; };
-		7122DBAD1926E97A009936A5 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7122DB9B1926E97A009936A5 /* AppConstants.m */; };
-		7122DBAE1926E97A009936A5 /* AppDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7122DB9D1926E97A009936A5 /* AppDateFormatter.m */; };
-		7122DBAF1926E97A009936A5 /* AppDebugLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 7122DB9F1926E97A009936A5 /* AppDebugLog.m */; };
-		7122DBB01926E97A009936A5 /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7122DBA11926E97A009936A5 /* AppManager.m */; };
-		7122DBB11926E97A009936A5 /* AppQueryParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7122DBA31926E97A009936A5 /* AppQueryParameter.m */; };
-		7122DBB21926E97A009936A5 /* DataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 7122DBA51926E97A009936A5 /* DataAccess.m */; };
-		7122DBB31926E97A009936A5 /* GTMStackTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 7122DBA71926E97A009936A5 /* GTMStackTrace.m */; };
-		7122DBB41926E97A009936A5 /* SettingsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7122DBA91926E97A009936A5 /* SettingsModel.m */; };
-		7122DBB51926E97A009936A5 /* UTCDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7122DBAB1926E97A009936A5 /* UTCDate.m */; };
 		7122DBBC1926E996009936A5 /* CompanyConvertor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7122DBB71926E996009936A5 /* CompanyConvertor.m */; };
 		7122DBBD1926E996009936A5 /* CompanyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7122DBB91926E996009936A5 /* CompanyModel.m */; };
 		7122DBBE1926E996009936A5 /* CompanyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7122DBBB1926E996009936A5 /* CompanyObject.m */; };
@@ -59,10 +62,7 @@
 		713CF22F1927234B00C02EB5 /* Intel.png in Resources */ = {isa = PBXBuildFile; fileRef = 713CF2251927234B00C02EB5 /* Intel.png */; };
 		713CF2301927234B00C02EB5 /* WellsFargo.png in Resources */ = {isa = PBXBuildFile; fileRef = 713CF2261927234B00C02EB5 /* WellsFargo.png */; };
 		713CF2311927234B00C02EB5 /* Zynga.png in Resources */ = {isa = PBXBuildFile; fileRef = 713CF2271927234B00C02EB5 /* Zynga.png */; };
-		713D87821927D5720099D963 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 713D87811927D5720099D963 /* NSString+Category.m */; };
-		713D87851927D5F30099D963 /* NSDictionary+JSONCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 713D87841927D5F30099D963 /* NSDictionary+JSONCategory.m */; };
 		713D87871927D7DB0099D963 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713D87861927D7DB0099D963 /* AdSupport.framework */; };
-		713D878A1927D84A0099D963 /* DeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 713D87891927D84A0099D963 /* DeviceUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +76,49 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		711BF1F619292B94002D2514 /* AppAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppAnalytics.h; path = AppIOS/Analytics/Google/AppAnalytics.h; sourceTree = SOURCE_ROOT; };
+		711BF1F719292B94002D2514 /* AppAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppAnalytics.m; path = AppIOS/Analytics/Google/AppAnalytics.m; sourceTree = SOURCE_ROOT; };
+		711BF1F819292B94002D2514 /* AppAnalyticsTrackerVCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppAnalyticsTrackerVCtrl.h; path = AppIOS/Analytics/Google/AppAnalyticsTrackerVCtrl.h; sourceTree = SOURCE_ROOT; };
+		711BF1F919292B94002D2514 /* AppAnalyticsTrackerVCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppAnalyticsTrackerVCtrl.m; path = AppIOS/Analytics/Google/AppAnalyticsTrackerVCtrl.m; sourceTree = SOURCE_ROOT; };
+		711BF1FA19292B94002D2514 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAI.h; path = AppIOS/Analytics/Google/GAI.h; sourceTree = SOURCE_ROOT; };
+		711BF1FB19292B94002D2514 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAIDictionaryBuilder.h; path = AppIOS/Analytics/Google/GAIDictionaryBuilder.h; sourceTree = SOURCE_ROOT; };
+		711BF1FC19292B94002D2514 /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAIFields.h; path = AppIOS/Analytics/Google/GAIFields.h; sourceTree = SOURCE_ROOT; };
+		711BF1FD19292B94002D2514 /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAILogger.h; path = AppIOS/Analytics/Google/GAILogger.h; sourceTree = SOURCE_ROOT; };
+		711BF1FE19292B94002D2514 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITrackedViewController.h; path = AppIOS/Analytics/Google/GAITrackedViewController.h; sourceTree = SOURCE_ROOT; };
+		711BF1FF19292B94002D2514 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITracker.h; path = AppIOS/Analytics/Google/GAITracker.h; sourceTree = SOURCE_ROOT; };
+		711BF20219292BA2002D2514 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = AppIOS/Analytics/Google/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		711BF20419292BE2002D2514 /* AppConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppConnectionOperation.h; path = AppIOS/App/AppConnectionOperation.h; sourceTree = SOURCE_ROOT; };
+		711BF20519292BE2002D2514 /* AppConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppConnectionOperation.m; path = AppIOS/App/AppConnectionOperation.m; sourceTree = SOURCE_ROOT; };
+		711BF20619292BE2002D2514 /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppConstants.h; path = AppIOS/App/AppConstants.h; sourceTree = SOURCE_ROOT; };
+		711BF20719292BE2002D2514 /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppConstants.m; path = AppIOS/App/AppConstants.m; sourceTree = SOURCE_ROOT; };
+		711BF20819292BE2002D2514 /* AppDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDateFormatter.h; path = AppIOS/App/AppDateFormatter.h; sourceTree = SOURCE_ROOT; };
+		711BF20919292BE2002D2514 /* AppDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDateFormatter.m; path = AppIOS/App/AppDateFormatter.m; sourceTree = SOURCE_ROOT; };
+		711BF20A19292BE2002D2514 /* AppDebugLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDebugLog.h; path = AppIOS/App/AppDebugLog.h; sourceTree = SOURCE_ROOT; };
+		711BF20B19292BE2002D2514 /* AppDebugLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDebugLog.m; path = AppIOS/App/AppDebugLog.m; sourceTree = SOURCE_ROOT; };
+		711BF20C19292BE2002D2514 /* AppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppManager.h; path = AppIOS/App/AppManager.h; sourceTree = SOURCE_ROOT; };
+		711BF20D19292BE2002D2514 /* AppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppManager.m; path = AppIOS/App/AppManager.m; sourceTree = SOURCE_ROOT; };
+		711BF20E19292BE2002D2514 /* AppQueryParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppQueryParameter.h; path = AppIOS/App/AppQueryParameter.h; sourceTree = SOURCE_ROOT; };
+		711BF20F19292BE2002D2514 /* AppQueryParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppQueryParameter.m; path = AppIOS/App/AppQueryParameter.m; sourceTree = SOURCE_ROOT; };
+		711BF21019292BE2002D2514 /* DataAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataAccess.h; path = AppIOS/App/DataAccess.h; sourceTree = SOURCE_ROOT; };
+		711BF21119292BE2002D2514 /* DataAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataAccess.m; path = AppIOS/App/DataAccess.m; sourceTree = SOURCE_ROOT; };
+		711BF21219292BE2002D2514 /* DeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceUtils.h; path = AppIOS/App/DeviceUtils.h; sourceTree = SOURCE_ROOT; };
+		711BF21319292BE2002D2514 /* DeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceUtils.m; path = AppIOS/App/DeviceUtils.m; sourceTree = SOURCE_ROOT; };
+		711BF21419292BE2002D2514 /* GTMStackTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMStackTrace.h; path = AppIOS/App/GTMStackTrace.h; sourceTree = SOURCE_ROOT; };
+		711BF21519292BE2002D2514 /* GTMStackTrace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMStackTrace.m; path = AppIOS/App/GTMStackTrace.m; sourceTree = SOURCE_ROOT; };
+		711BF21619292BE2002D2514 /* SettingsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsModel.h; path = AppIOS/App/SettingsModel.h; sourceTree = SOURCE_ROOT; };
+		711BF21719292BE2002D2514 /* SettingsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsModel.m; path = AppIOS/App/SettingsModel.m; sourceTree = SOURCE_ROOT; };
+		711BF21819292BE2002D2514 /* UTCDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UTCDate.h; path = AppIOS/App/UTCDate.h; sourceTree = SOURCE_ROOT; };
+		711BF21919292BE2002D2514 /* UTCDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UTCDate.m; path = AppIOS/App/UTCDate.m; sourceTree = SOURCE_ROOT; };
+		711BF22519292E79002D2514 /* AppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppViewController.h; path = AppIOS/App/AppViewController.h; sourceTree = SOURCE_ROOT; };
+		711BF22619292E79002D2514 /* AppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppViewController.m; path = AppIOS/App/AppViewController.m; sourceTree = SOURCE_ROOT; };
+		711BF22819292E90002D2514 /* NSData+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Category.h"; path = "AppIOS/App/NSData+Category.h"; sourceTree = SOURCE_ROOT; };
+		711BF22919292E90002D2514 /* NSData+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Category.m"; path = "AppIOS/App/NSData+Category.m"; sourceTree = SOURCE_ROOT; };
+		711BF22A19292E90002D2514 /* NSDictionary+JSONCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+JSONCategory.h"; path = "AppIOS/App/NSDictionary+JSONCategory.h"; sourceTree = SOURCE_ROOT; };
+		711BF22B19292E90002D2514 /* NSDictionary+JSONCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+JSONCategory.m"; path = "AppIOS/App/NSDictionary+JSONCategory.m"; sourceTree = SOURCE_ROOT; };
+		711BF22C19292E90002D2514 /* NSException+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSException+Category.h"; path = "AppIOS/App/NSException+Category.h"; sourceTree = SOURCE_ROOT; };
+		711BF22D19292E90002D2514 /* NSException+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSException+Category.m"; path = "AppIOS/App/NSException+Category.m"; sourceTree = SOURCE_ROOT; };
+		711BF22E19292E90002D2514 /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Category.h"; path = "AppIOS/App/NSString+Category.h"; sourceTree = SOURCE_ROOT; };
+		711BF22F19292E90002D2514 /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Category.m"; path = "AppIOS/App/NSString+Category.m"; sourceTree = SOURCE_ROOT; };
 		71225CBD1926DAEE00DA1591 /* DBExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DBExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71225CC01926DAEE00DA1591 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		71225CC21926DAEE00DA1591 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -94,49 +137,12 @@
 		71225CEA1926DAEE00DA1591 /* DBExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DBExampleTests-Info.plist"; sourceTree = "<group>"; };
 		71225CEC1926DAEE00DA1591 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		71225CEE1926DAEE00DA1591 /* DBExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBExampleTests.m; sourceTree = "<group>"; };
-		7122DB751926E836009936A5 /* AppAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppAnalytics.h; path = Analytics/Google/AppAnalytics.h; sourceTree = "<group>"; };
-		7122DB761926E836009936A5 /* AppAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppAnalytics.m; path = Analytics/Google/AppAnalytics.m; sourceTree = "<group>"; };
-		7122DB771926E836009936A5 /* AppAnalyticsTrackerVCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppAnalyticsTrackerVCtrl.h; path = Analytics/Google/AppAnalyticsTrackerVCtrl.h; sourceTree = "<group>"; };
-		7122DB781926E836009936A5 /* AppAnalyticsTrackerVCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppAnalyticsTrackerVCtrl.m; path = Analytics/Google/AppAnalyticsTrackerVCtrl.m; sourceTree = "<group>"; };
-		7122DB791926E836009936A5 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAI.h; path = Analytics/Google/GAI.h; sourceTree = "<group>"; };
-		7122DB7A1926E836009936A5 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAIDictionaryBuilder.h; path = Analytics/Google/GAIDictionaryBuilder.h; sourceTree = "<group>"; };
-		7122DB7B1926E836009936A5 /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAIFields.h; path = Analytics/Google/GAIFields.h; sourceTree = "<group>"; };
-		7122DB7C1926E836009936A5 /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAILogger.h; path = Analytics/Google/GAILogger.h; sourceTree = "<group>"; };
-		7122DB7D1926E836009936A5 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITrackedViewController.h; path = Analytics/Google/GAITrackedViewController.h; sourceTree = "<group>"; };
-		7122DB7E1926E836009936A5 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITracker.h; path = Analytics/Google/GAITracker.h; sourceTree = "<group>"; };
-		7122DB811926E848009936A5 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = DBExample/Analytics/Google/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		7122DB831926E8B0009936A5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		7122DB841926E8B0009936A5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7122DB851926E8B0009936A5 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		7122DB861926E8B0009936A5 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		7122DB871926E8B0009936A5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		7122DB881926E8B1009936A5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		7122DB8F1926E90D009936A5 /* NSData+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Category.h"; path = "ViewControllers/NSData+Category.h"; sourceTree = "<group>"; };
-		7122DB901926E90D009936A5 /* NSData+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Category.m"; path = "ViewControllers/NSData+Category.m"; sourceTree = "<group>"; };
-		7122DB911926E90D009936A5 /* NSException+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSException+Category.h"; path = "ViewControllers/NSException+Category.h"; sourceTree = "<group>"; };
-		7122DB921926E90D009936A5 /* NSException+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSException+Category.m"; path = "ViewControllers/NSException+Category.m"; sourceTree = "<group>"; };
-		7122DB951926E92C009936A5 /* AppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppViewController.h; path = ViewControllers/AppViewController.h; sourceTree = "<group>"; };
-		7122DB961926E92C009936A5 /* AppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppViewController.m; path = ViewControllers/AppViewController.m; sourceTree = "<group>"; };
-		7122DB981926E97A009936A5 /* AppConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppConnectionOperation.h; path = ViewControllers/AppConnectionOperation.h; sourceTree = "<group>"; };
-		7122DB991926E97A009936A5 /* AppConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppConnectionOperation.m; path = ViewControllers/AppConnectionOperation.m; sourceTree = "<group>"; };
-		7122DB9A1926E97A009936A5 /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppConstants.h; path = ViewControllers/AppConstants.h; sourceTree = "<group>"; };
-		7122DB9B1926E97A009936A5 /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppConstants.m; path = ViewControllers/AppConstants.m; sourceTree = "<group>"; };
-		7122DB9C1926E97A009936A5 /* AppDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDateFormatter.h; path = ViewControllers/AppDateFormatter.h; sourceTree = "<group>"; };
-		7122DB9D1926E97A009936A5 /* AppDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDateFormatter.m; path = ViewControllers/AppDateFormatter.m; sourceTree = "<group>"; };
-		7122DB9E1926E97A009936A5 /* AppDebugLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDebugLog.h; path = ViewControllers/AppDebugLog.h; sourceTree = "<group>"; };
-		7122DB9F1926E97A009936A5 /* AppDebugLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDebugLog.m; path = ViewControllers/AppDebugLog.m; sourceTree = "<group>"; };
-		7122DBA01926E97A009936A5 /* AppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppManager.h; path = ViewControllers/AppManager.h; sourceTree = "<group>"; };
-		7122DBA11926E97A009936A5 /* AppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppManager.m; path = ViewControllers/AppManager.m; sourceTree = "<group>"; };
-		7122DBA21926E97A009936A5 /* AppQueryParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppQueryParameter.h; path = ViewControllers/AppQueryParameter.h; sourceTree = "<group>"; };
-		7122DBA31926E97A009936A5 /* AppQueryParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppQueryParameter.m; path = ViewControllers/AppQueryParameter.m; sourceTree = "<group>"; };
-		7122DBA41926E97A009936A5 /* DataAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataAccess.h; path = ViewControllers/DataAccess.h; sourceTree = "<group>"; };
-		7122DBA51926E97A009936A5 /* DataAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataAccess.m; path = ViewControllers/DataAccess.m; sourceTree = "<group>"; };
-		7122DBA61926E97A009936A5 /* GTMStackTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMStackTrace.h; path = ViewControllers/GTMStackTrace.h; sourceTree = "<group>"; };
-		7122DBA71926E97A009936A5 /* GTMStackTrace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMStackTrace.m; path = ViewControllers/GTMStackTrace.m; sourceTree = "<group>"; };
-		7122DBA81926E97A009936A5 /* SettingsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsModel.h; path = ViewControllers/SettingsModel.h; sourceTree = "<group>"; };
-		7122DBA91926E97A009936A5 /* SettingsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsModel.m; path = ViewControllers/SettingsModel.m; sourceTree = "<group>"; };
-		7122DBAA1926E97A009936A5 /* UTCDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UTCDate.h; path = ViewControllers/UTCDate.h; sourceTree = "<group>"; };
-		7122DBAB1926E97A009936A5 /* UTCDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UTCDate.m; path = ViewControllers/UTCDate.m; sourceTree = "<group>"; };
 		7122DBB61926E996009936A5 /* CompanyConvertor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CompanyConvertor.h; path = ViewControllers/CompanyConvertor.h; sourceTree = "<group>"; };
 		7122DBB71926E996009936A5 /* CompanyConvertor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CompanyConvertor.m; path = ViewControllers/CompanyConvertor.m; sourceTree = "<group>"; };
 		7122DBB81926E996009936A5 /* CompanyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CompanyModel.h; path = ViewControllers/CompanyModel.h; sourceTree = "<group>"; };
@@ -157,13 +163,7 @@
 		713CF2251927234B00C02EB5 /* Intel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Intel.png; path = Companies/Intel.png; sourceTree = "<group>"; };
 		713CF2261927234B00C02EB5 /* WellsFargo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WellsFargo.png; path = Companies/WellsFargo.png; sourceTree = "<group>"; };
 		713CF2271927234B00C02EB5 /* Zynga.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Zynga.png; path = Companies/Zynga.png; sourceTree = "<group>"; };
-		713D87801927D5720099D963 /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Category.h"; path = "ViewControllers/NSString+Category.h"; sourceTree = "<group>"; };
-		713D87811927D5720099D963 /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Category.m"; path = "ViewControllers/NSString+Category.m"; sourceTree = "<group>"; };
-		713D87831927D5F30099D963 /* NSDictionary+JSONCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+JSONCategory.h"; path = "ViewControllers/NSDictionary+JSONCategory.h"; sourceTree = "<group>"; };
-		713D87841927D5F30099D963 /* NSDictionary+JSONCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+JSONCategory.m"; path = "ViewControllers/NSDictionary+JSONCategory.m"; sourceTree = "<group>"; };
 		713D87861927D7DB0099D963 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		713D87881927D84A0099D963 /* DeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceUtils.h; path = ViewControllers/DeviceUtils.h; sourceTree = "<group>"; };
-		713D87891927D84A0099D963 /* DeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceUtils.m; path = ViewControllers/DeviceUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,9 +179,9 @@
 				7122DB8D1926E8B1009936A5 /* Security.framework in Frameworks */,
 				7122DB8E1926E8B1009936A5 /* SystemConfiguration.framework in Frameworks */,
 				71225CC31926DAEE00DA1591 /* CoreGraphics.framework in Frameworks */,
+				711BF20319292BA2002D2514 /* libGoogleAnalyticsServices.a in Frameworks */,
 				71225CC51926DAEE00DA1591 /* UIKit.framework in Frameworks */,
 				71225CC11926DAEE00DA1591 /* Foundation.framework in Frameworks */,
-				7122DB821926E848009936A5 /* libGoogleAnalyticsServices.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,8 +222,8 @@
 			children = (
 				713D87861927D7DB0099D963 /* AdSupport.framework */,
 				7122DB851926E8B0009936A5 /* libsqlite3.0.dylib */,
+				711BF20219292BA2002D2514 /* libGoogleAnalyticsServices.a */,
 				7122DB861926E8B0009936A5 /* libz.dylib */,
-				7122DB811926E848009936A5 /* libGoogleAnalyticsServices.a */,
 				7122DB831926E8B0009936A5 /* CFNetwork.framework */,
 				7122DB841926E8B0009936A5 /* CoreData.framework */,
 				7122DB871926E8B0009936A5 /* Security.framework */,
@@ -289,16 +289,16 @@
 		7122DB6E1926E791009936A5 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
-				7122DB751926E836009936A5 /* AppAnalytics.h */,
-				7122DB761926E836009936A5 /* AppAnalytics.m */,
-				7122DB771926E836009936A5 /* AppAnalyticsTrackerVCtrl.h */,
-				7122DB781926E836009936A5 /* AppAnalyticsTrackerVCtrl.m */,
-				7122DB791926E836009936A5 /* GAI.h */,
-				7122DB7A1926E836009936A5 /* GAIDictionaryBuilder.h */,
-				7122DB7B1926E836009936A5 /* GAIFields.h */,
-				7122DB7C1926E836009936A5 /* GAILogger.h */,
-				7122DB7D1926E836009936A5 /* GAITrackedViewController.h */,
-				7122DB7E1926E836009936A5 /* GAITracker.h */,
+				711BF1F619292B94002D2514 /* AppAnalytics.h */,
+				711BF1F719292B94002D2514 /* AppAnalytics.m */,
+				711BF1F819292B94002D2514 /* AppAnalyticsTrackerVCtrl.h */,
+				711BF1F919292B94002D2514 /* AppAnalyticsTrackerVCtrl.m */,
+				711BF1FA19292B94002D2514 /* GAI.h */,
+				711BF1FB19292B94002D2514 /* GAIDictionaryBuilder.h */,
+				711BF1FC19292B94002D2514 /* GAIFields.h */,
+				711BF1FD19292B94002D2514 /* GAILogger.h */,
+				711BF1FE19292B94002D2514 /* GAITrackedViewController.h */,
+				711BF1FF19292B94002D2514 /* GAITracker.h */,
 			);
 			name = Analytics;
 			sourceTree = "<group>";
@@ -306,14 +306,14 @@
 		7122DB6F1926E7A7009936A5 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				7122DB8F1926E90D009936A5 /* NSData+Category.h */,
-				7122DB901926E90D009936A5 /* NSData+Category.m */,
-				7122DB911926E90D009936A5 /* NSException+Category.h */,
-				7122DB921926E90D009936A5 /* NSException+Category.m */,
-				713D87801927D5720099D963 /* NSString+Category.h */,
-				713D87811927D5720099D963 /* NSString+Category.m */,
-				713D87831927D5F30099D963 /* NSDictionary+JSONCategory.h */,
-				713D87841927D5F30099D963 /* NSDictionary+JSONCategory.m */,
+				711BF22819292E90002D2514 /* NSData+Category.h */,
+				711BF22919292E90002D2514 /* NSData+Category.m */,
+				711BF22A19292E90002D2514 /* NSDictionary+JSONCategory.h */,
+				711BF22B19292E90002D2514 /* NSDictionary+JSONCategory.m */,
+				711BF22C19292E90002D2514 /* NSException+Category.h */,
+				711BF22D19292E90002D2514 /* NSException+Category.m */,
+				711BF22E19292E90002D2514 /* NSString+Category.h */,
+				711BF22F19292E90002D2514 /* NSString+Category.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -321,28 +321,28 @@
 		7122DB701926E7B1009936A5 /* AppModels */ = {
 			isa = PBXGroup;
 			children = (
-				7122DB981926E97A009936A5 /* AppConnectionOperation.h */,
-				7122DB991926E97A009936A5 /* AppConnectionOperation.m */,
-				7122DB9A1926E97A009936A5 /* AppConstants.h */,
-				7122DB9B1926E97A009936A5 /* AppConstants.m */,
-				7122DB9C1926E97A009936A5 /* AppDateFormatter.h */,
-				7122DB9D1926E97A009936A5 /* AppDateFormatter.m */,
-				7122DB9E1926E97A009936A5 /* AppDebugLog.h */,
-				7122DB9F1926E97A009936A5 /* AppDebugLog.m */,
-				7122DBA01926E97A009936A5 /* AppManager.h */,
-				7122DBA11926E97A009936A5 /* AppManager.m */,
-				7122DBA21926E97A009936A5 /* AppQueryParameter.h */,
-				7122DBA31926E97A009936A5 /* AppQueryParameter.m */,
-				7122DBA41926E97A009936A5 /* DataAccess.h */,
-				7122DBA51926E97A009936A5 /* DataAccess.m */,
-				7122DBA61926E97A009936A5 /* GTMStackTrace.h */,
-				7122DBA71926E97A009936A5 /* GTMStackTrace.m */,
-				7122DBA81926E97A009936A5 /* SettingsModel.h */,
-				7122DBA91926E97A009936A5 /* SettingsModel.m */,
-				7122DBAA1926E97A009936A5 /* UTCDate.h */,
-				7122DBAB1926E97A009936A5 /* UTCDate.m */,
-				713D87881927D84A0099D963 /* DeviceUtils.h */,
-				713D87891927D84A0099D963 /* DeviceUtils.m */,
+				711BF20419292BE2002D2514 /* AppConnectionOperation.h */,
+				711BF20519292BE2002D2514 /* AppConnectionOperation.m */,
+				711BF20619292BE2002D2514 /* AppConstants.h */,
+				711BF20719292BE2002D2514 /* AppConstants.m */,
+				711BF20819292BE2002D2514 /* AppDateFormatter.h */,
+				711BF20919292BE2002D2514 /* AppDateFormatter.m */,
+				711BF20A19292BE2002D2514 /* AppDebugLog.h */,
+				711BF20B19292BE2002D2514 /* AppDebugLog.m */,
+				711BF20C19292BE2002D2514 /* AppManager.h */,
+				711BF20D19292BE2002D2514 /* AppManager.m */,
+				711BF20E19292BE2002D2514 /* AppQueryParameter.h */,
+				711BF20F19292BE2002D2514 /* AppQueryParameter.m */,
+				711BF21019292BE2002D2514 /* DataAccess.h */,
+				711BF21119292BE2002D2514 /* DataAccess.m */,
+				711BF21219292BE2002D2514 /* DeviceUtils.h */,
+				711BF21319292BE2002D2514 /* DeviceUtils.m */,
+				711BF21419292BE2002D2514 /* GTMStackTrace.h */,
+				711BF21519292BE2002D2514 /* GTMStackTrace.m */,
+				711BF21619292BE2002D2514 /* SettingsModel.h */,
+				711BF21719292BE2002D2514 /* SettingsModel.m */,
+				711BF21819292BE2002D2514 /* UTCDate.h */,
+				711BF21919292BE2002D2514 /* UTCDate.m */,
 			);
 			name = AppModels;
 			sourceTree = "<group>";
@@ -350,8 +350,8 @@
 		7122DB711926E7C2009936A5 /* AppControls */ = {
 			isa = PBXGroup;
 			children = (
-				7122DB951926E92C009936A5 /* AppViewController.h */,
-				7122DB961926E92C009936A5 /* AppViewController.m */,
+				711BF22519292E79002D2514 /* AppViewController.h */,
+				711BF22619292E79002D2514 /* AppViewController.m */,
 			);
 			name = AppControls;
 			sourceTree = "<group>";
@@ -538,31 +538,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				713D87851927D5F30099D963 /* NSDictionary+JSONCategory.m in Sources */,
-				713D878A1927D84A0099D963 /* DeviceUtils.m in Sources */,
-				7122DBB11926E97A009936A5 /* AppQueryParameter.m in Sources */,
-				7122DBB41926E97A009936A5 /* SettingsModel.m in Sources */,
-				7122DBB51926E97A009936A5 /* UTCDate.m in Sources */,
 				7122DBBC1926E996009936A5 /* CompanyConvertor.m in Sources */,
-				7122DBAE1926E97A009936A5 /* AppDateFormatter.m in Sources */,
+				711BF21B19292BE2002D2514 /* AppConstants.m in Sources */,
 				7122DBBD1926E996009936A5 /* CompanyModel.m in Sources */,
-				7122DB931926E90D009936A5 /* NSData+Category.m in Sources */,
-				713D87821927D5720099D963 /* NSString+Category.m in Sources */,
+				711BF22019292BE2002D2514 /* DataAccess.m in Sources */,
+				711BF22719292E79002D2514 /* AppViewController.m in Sources */,
+				711BF21D19292BE2002D2514 /* AppDebugLog.m in Sources */,
+				711BF20019292B94002D2514 /* AppAnalytics.m in Sources */,
+				711BF21E19292BE2002D2514 /* AppManager.m in Sources */,
+				711BF22219292BE2002D2514 /* GTMStackTrace.m in Sources */,
 				7122DBBE1926E996009936A5 /* CompanyObject.m in Sources */,
+				711BF23219292E90002D2514 /* NSException+Category.m in Sources */,
+				711BF23019292E90002D2514 /* NSData+Category.m in Sources */,
+				711BF22119292BE2002D2514 /* DeviceUtils.m in Sources */,
 				7122DBC61926EA21009936A5 /* AddCompanyViewController.m in Sources */,
-				7122DB801926E836009936A5 /* AppAnalyticsTrackerVCtrl.m in Sources */,
-				7122DB941926E90D009936A5 /* NSException+Category.m in Sources */,
-				7122DBB01926E97A009936A5 /* AppManager.m in Sources */,
-				7122DBB31926E97A009936A5 /* GTMStackTrace.m in Sources */,
+				711BF21F19292BE2002D2514 /* AppQueryParameter.m in Sources */,
 				71225CD11926DAEE00DA1591 /* AppDelegate.m in Sources */,
-				7122DB7F1926E836009936A5 /* AppAnalytics.m in Sources */,
+				711BF22319292BE2002D2514 /* SettingsModel.m in Sources */,
+				711BF22419292BE2002D2514 /* UTCDate.m in Sources */,
+				711BF23319292E90002D2514 /* NSString+Category.m in Sources */,
+				711BF23119292E90002D2514 /* NSDictionary+JSONCategory.m in Sources */,
 				7122DBC71926EA21009936A5 /* CompanyTableViewController.m in Sources */,
-				7122DBB21926E97A009936A5 /* DataAccess.m in Sources */,
-				7122DBAC1926E97A009936A5 /* AppConnectionOperation.m in Sources */,
-				7122DB971926E92C009936A5 /* AppViewController.m in Sources */,
+				711BF21C19292BE2002D2514 /* AppDateFormatter.m in Sources */,
+				711BF20119292B94002D2514 /* AppAnalyticsTrackerVCtrl.m in Sources */,
 				71225CCD1926DAEE00DA1591 /* main.m in Sources */,
-				7122DBAF1926E97A009936A5 /* AppDebugLog.m in Sources */,
-				7122DBAD1926E97A009936A5 /* AppConstants.m in Sources */,
+				711BF21A19292BE2002D2514 /* AppConnectionOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -709,6 +709,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DBExample/Analytics/Google",
+					"$(PROJECT_DIR)/AppIOS/Analytics/Google",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -732,6 +733,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DBExample/Analytics/Google",
+					"$(PROJECT_DIR)/AppIOS/Analytics/Google",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "armv7 armv7s arm64";
