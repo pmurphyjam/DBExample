@@ -529,7 +529,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "git_version=$(git log -1 --format=\"%h\")\ngit_branch=$(git symbolic-ref --short -q HEAD)\ngit_tag=$(git describe --tags --exact-match 2>/dev/null)\n\nbuild_time=$(date \"+%m-%d-%Y %r\")\ngit_branch_or_tag=\"${git_branch:-${git_tag}}\"\n\ninfo_plist=\"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}/Info.plist\"\n/usr/libexec/PlistBuddy -c \"Set :GitCommit '${git_branch_or_tag}-${git_version}'\" \"${info_plist}\"\n/usr/libexec/PlistBuddy -c \"Set :BuildDate '${build_time}'\" \"${info_plist}\"\n\n";
+			shellScript = "git_version=$(git log -1 --format=\"%h\")\ngit_branch=$(git symbolic-ref --short -q HEAD)\ngit_tag=$(git describe --tags --exact-match 2>/dev/null)\n\nbuild_time=$(date \"+%m-%d-%Y %r\")\ngit_branch_or_tag=\"${git_branch:-${git_tag}}\"\n\ninfo_plist=\"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}/Info.plist\"\n#/usr/libexec/PlistBuddy -c \"Set :GitCommit '${git_branch_or_tag}-${git_version}'\" \"${info_plist}\"\n#/usr/libexec/PlistBuddy -c \"Set :BuildDate '${build_time}'\" \"${info_plist}\"\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
