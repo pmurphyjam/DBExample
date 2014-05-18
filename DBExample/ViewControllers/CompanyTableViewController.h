@@ -13,6 +13,6 @@
 
 @interface CompanyTableViewController : UITableViewController<UITableViewDataSource,UITableViewDelegate,AddCompanyDelegate>
 
--(void) populateCompanies;
+-(void)populateCompanies:(BOOL)reload;
 
 @end

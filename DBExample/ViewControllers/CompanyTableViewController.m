@@ -47,7 +47,7 @@
                                              value:nil] build];
     [[AppAnalytics sharedInstance].defaultTracker send:event];
 
-    [self populateCompanies];
+    [self populateCompanies:YES];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -65,10 +65,11 @@
     [super viewDidDisappear:animated];
 }
 
--(void) populateCompanies
+-(void)populateCompanies:(BOOL)reload
 {
     companyArray = [CompanyModel getCompanysForView];
-    [companyTableView reloadData];
+    if(reload)
+        [companyTableView reloadData];
     NDLog(@"CompanyVCtrl : companyArray[%d] = %@",[companyArray count],companyArray);
 }
 
@@ -91,17 +92,8 @@
         addCompanyViewController.companyToEdit = company;
     }
 }
-#pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return [companyArray count];
-}
+#pragma mark - addCompany Delegates
 
 -(void) addCompanyViewControllerDidCancel:(AddCompanyViewController *)controller
 {
@@ -112,15 +104,27 @@
 -(void) addCompanyViewController:(AddCompanyViewController *)controller didEditCompany:(CompanyObject*)company
 {
     [CompanyModel updateCompany:company];
-    [self populateCompanies];
+    [self populateCompanies:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void) addCompanyViewController:(AddCompanyViewController *)controller didAddCompany:(CompanyObject*)company
 {
     [CompanyModel insertCompany:company];
-    [self populateCompanies];
+    [self populateCompanies:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [companyArray count];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -136,6 +140,38 @@
     NDLog(@"CompanyVCtrl : company[%ld] = %@",(long)[indexPath row],company);
     [[cell textLabel] setText:[NSString stringWithFormat:@"%@ %@",company.name,company.address]];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (tableView == companyTableView)
+    {
+        if (editingStyle == UITableViewCellEditingStyleDelete)
+        {
+            CompanyObject *company = [companyArray objectAtIndex:[indexPath row]];
+            NDLog(@"CompanyVCtrl : Delete : company[%ld] = %@",(long)[indexPath row],company);
+            [CompanyModel deleteCompany:company];
+            [self populateCompanies:NO];
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath, nil] withRowAnimation:UITableViewRowAnimationFade];
+        }
+    }
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0)
+    {
+        return UITableViewCellEditingStyleNone;
+    }
+    else
+    {
+        return UITableViewCellEditingStyleDelete;
+    }
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return @"Delete";
 }
 
 //Keep this last in the file
