@@ -26,6 +26,8 @@
 		711BF23119292E90002D2514 /* NSDictionary+JSONCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF22B19292E90002D2514 /* NSDictionary+JSONCategory.m */; };
 		711BF23219292E90002D2514 /* NSException+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF22D19292E90002D2514 /* NSException+Category.m */; };
 		711BF23319292E90002D2514 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF22F19292E90002D2514 /* NSString+Category.m */; };
+		711BF23619293C50002D2514 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 711BF23519293C50002D2514 /* README.md */; };
+		711BF23819293C74002D2514 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 711BF23719293C74002D2514 /* README.md */; };
 		71225CC11926DAEE00DA1591 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71225CC01926DAEE00DA1591 /* Foundation.framework */; };
 		71225CC31926DAEE00DA1591 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71225CC21926DAEE00DA1591 /* CoreGraphics.framework */; };
 		71225CC51926DAEE00DA1591 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71225CC41926DAEE00DA1591 /* UIKit.framework */; };
@@ -119,6 +121,8 @@
 		711BF22D19292E90002D2514 /* NSException+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSException+Category.m"; path = "AppIOS/App/NSException+Category.m"; sourceTree = SOURCE_ROOT; };
 		711BF22E19292E90002D2514 /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Category.h"; path = "AppIOS/App/NSString+Category.h"; sourceTree = SOURCE_ROOT; };
 		711BF22F19292E90002D2514 /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Category.m"; path = "AppIOS/App/NSString+Category.m"; sourceTree = SOURCE_ROOT; };
+		711BF23519293C50002D2514 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
+		711BF23719293C74002D2514 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = AppIOS/README.md; sourceTree = SOURCE_ROOT; };
 		71225CBD1926DAEE00DA1591 /* DBExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DBExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71225CC01926DAEE00DA1591 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		71225CC21926DAEE00DA1591 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -198,6 +202,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		711BF23419293C32002D2514 /* ReadMe */ = {
+			isa = PBXGroup;
+			children = (
+				711BF23719293C74002D2514 /* README.md */,
+				711BF23519293C50002D2514 /* README.md */,
+			);
+			name = ReadMe;
+			sourceTree = "<group>";
+		};
 		71225CB41926DAEE00DA1591 = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +252,7 @@
 		71225CC61926DAEE00DA1591 /* DBExample */ = {
 			isa = PBXGroup;
 			children = (
+				711BF23419293C32002D2514 /* ReadMe */,
 				7122DB6E1926E791009936A5 /* Analytics */,
 				7122DB6F1926E7A7009936A5 /* Categories */,
 				7122DB711926E7C2009936A5 /* AppControls */,
@@ -495,10 +509,12 @@
 				713CF22D1927234B00C02EB5 /* Chevron.png in Resources */,
 				713CF22C1927234B00C02EB5 /* ChaseBank.png in Resources */,
 				713CF2311927234B00C02EB5 /* Zynga.png in Resources */,
+				711BF23619293C50002D2514 /* README.md in Resources */,
 				713CF2301927234B00C02EB5 /* WellsFargo.png in Resources */,
 				71225CD71926DAEE00DA1591 /* Main_iPad.storyboard in Resources */,
 				713CF22F1927234B00C02EB5 /* Intel.png in Resources */,
 				71225CDC1926DAEE00DA1591 /* Images.xcassets in Resources */,
+				711BF23819293C74002D2514 /* README.md in Resources */,
 				71225CD41926DAEE00DA1591 /* Main_iPhone.storyboard in Resources */,
 				713CF22B1927234B00C02EB5 /* BofA.png in Resources */,
 				713CF22E1927234B00C02EB5 /* Cisco.png in Resources */,
