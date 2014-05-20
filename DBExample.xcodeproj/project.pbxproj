@@ -11,7 +11,6 @@
 		711BF20119292B94002D2514 /* AppAnalyticsTrackerVCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF1F919292B94002D2514 /* AppAnalyticsTrackerVCtrl.m */; };
 		711BF20319292BA2002D2514 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 711BF20219292BA2002D2514 /* libGoogleAnalyticsServices.a */; };
 		711BF21A19292BE2002D2514 /* AppConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF20519292BE2002D2514 /* AppConnectionOperation.m */; };
-		711BF21B19292BE2002D2514 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF20719292BE2002D2514 /* AppConstants.m */; };
 		711BF21C19292BE2002D2514 /* AppDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF20919292BE2002D2514 /* AppDateFormatter.m */; };
 		711BF21D19292BE2002D2514 /* AppDebugLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF20B19292BE2002D2514 /* AppDebugLog.m */; };
 		711BF21E19292BE2002D2514 /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF20D19292BE2002D2514 /* AppManager.m */; };
@@ -65,6 +64,7 @@
 		713CF2301927234B00C02EB5 /* WellsFargo.png in Resources */ = {isa = PBXBuildFile; fileRef = 713CF2261927234B00C02EB5 /* WellsFargo.png */; };
 		713CF2311927234B00C02EB5 /* Zynga.png in Resources */ = {isa = PBXBuildFile; fileRef = 713CF2271927234B00C02EB5 /* Zynga.png */; };
 		713D87871927D7DB0099D963 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713D87861927D7DB0099D963 /* AdSupport.framework */; };
+		71D688BD192A53B4003155D9 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D688BC192A53B4003155D9 /* AppConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,8 +91,6 @@
 		711BF20219292BA2002D2514 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = AppIOS/Analytics/Google/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		711BF20419292BE2002D2514 /* AppConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppConnectionOperation.h; path = AppIOS/App/AppConnectionOperation.h; sourceTree = SOURCE_ROOT; };
 		711BF20519292BE2002D2514 /* AppConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppConnectionOperation.m; path = AppIOS/App/AppConnectionOperation.m; sourceTree = SOURCE_ROOT; };
-		711BF20619292BE2002D2514 /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppConstants.h; path = AppIOS/App/AppConstants.h; sourceTree = SOURCE_ROOT; };
-		711BF20719292BE2002D2514 /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppConstants.m; path = AppIOS/App/AppConstants.m; sourceTree = SOURCE_ROOT; };
 		711BF20819292BE2002D2514 /* AppDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDateFormatter.h; path = AppIOS/App/AppDateFormatter.h; sourceTree = SOURCE_ROOT; };
 		711BF20919292BE2002D2514 /* AppDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDateFormatter.m; path = AppIOS/App/AppDateFormatter.m; sourceTree = SOURCE_ROOT; };
 		711BF20A19292BE2002D2514 /* AppDebugLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDebugLog.h; path = AppIOS/App/AppDebugLog.h; sourceTree = SOURCE_ROOT; };
@@ -168,6 +166,8 @@
 		713CF2261927234B00C02EB5 /* WellsFargo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WellsFargo.png; path = Companies/WellsFargo.png; sourceTree = "<group>"; };
 		713CF2271927234B00C02EB5 /* Zynga.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Zynga.png; path = Companies/Zynga.png; sourceTree = "<group>"; };
 		713D87861927D7DB0099D963 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		71D688BB192A53B4003155D9 /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppConstants.h; path = ViewControllers/AppConstants.h; sourceTree = "<group>"; };
+		71D688BC192A53B4003155D9 /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppConstants.m; path = ViewControllers/AppConstants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,10 +335,10 @@
 		7122DB701926E7B1009936A5 /* AppModels */ = {
 			isa = PBXGroup;
 			children = (
+				71D688BB192A53B4003155D9 /* AppConstants.h */,
+				71D688BC192A53B4003155D9 /* AppConstants.m */,
 				711BF20419292BE2002D2514 /* AppConnectionOperation.h */,
 				711BF20519292BE2002D2514 /* AppConnectionOperation.m */,
-				711BF20619292BE2002D2514 /* AppConstants.h */,
-				711BF20719292BE2002D2514 /* AppConstants.m */,
 				711BF20819292BE2002D2514 /* AppDateFormatter.h */,
 				711BF20919292BE2002D2514 /* AppDateFormatter.m */,
 				711BF20A19292BE2002D2514 /* AppDebugLog.h */,
@@ -555,7 +555,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7122DBBC1926E996009936A5 /* CompanyConvertor.m in Sources */,
-				711BF21B19292BE2002D2514 /* AppConstants.m in Sources */,
 				7122DBBD1926E996009936A5 /* CompanyModel.m in Sources */,
 				711BF22019292BE2002D2514 /* DataAccess.m in Sources */,
 				711BF22719292E79002D2514 /* AppViewController.m in Sources */,
@@ -579,6 +578,7 @@
 				711BF20119292B94002D2514 /* AppAnalyticsTrackerVCtrl.m in Sources */,
 				71225CCD1926DAEE00DA1591 /* main.m in Sources */,
 				711BF21A19292BE2002D2514 /* AppConnectionOperation.m in Sources */,
+				71D688BD192A53B4003155D9 /* AppConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
