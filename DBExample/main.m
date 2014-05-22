@@ -3,7 +3,7 @@
 //  DBExample
 //
 //  Created by Pat Murphy on 5/16/14.
-//  Copyright (c) 2014 Pat Murphy. All rights reserved.
+//  Copyright (c) 2014 Fitamatic All rights reserved.
 //
 //  Info : main program, uses NSException process to save a symbolicated crash and
 //  store this data into the DB. This data can then be loaded up to the Server later.

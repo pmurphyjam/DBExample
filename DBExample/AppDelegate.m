@@ -3,7 +3,7 @@
 //  DBExample
 //
 //  Created by Pat Murphy on 5/16/14.
-//  Copyright (c) 2014 Pat Murphy. All rights reserved.
+//  Copyright (c) 2014 Fitamatic All rights reserved.
 //
 //  Info : the main AppDelegate, this is always running, and always present.
 //  Do all your networking and Server communication here, or extend this class as a Category.
