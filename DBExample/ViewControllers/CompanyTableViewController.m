@@ -46,6 +46,7 @@
                                              label:[SettingsModel getUserName]
                                              value:nil] build];
     [[AppAnalytics sharedInstance].defaultTracker send:event];
+    [[AppAnalytics sharedInstance].defaultTracker set:kGAIScreenName value:@"CompanyVCtrl"];
 
     [self populateCompanies:YES];
 }

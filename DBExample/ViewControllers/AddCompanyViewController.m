@@ -51,6 +51,8 @@
                                              label:[SettingsModel getUserName]
                                              value:nil] build];
     [[AppAnalytics sharedInstance].defaultTracker send:event];
+    [[AppAnalytics sharedInstance].defaultTracker set:kGAIScreenName value:@"AddCompanyVCtrl"];
+
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
