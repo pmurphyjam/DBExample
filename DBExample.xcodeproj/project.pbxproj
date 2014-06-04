@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		711136CC193EA7740051F0EE /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 711136CB193EA7740051F0EE /* UIColor+Category.m */; };
 		711BF20019292B94002D2514 /* AppAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF1F719292B94002D2514 /* AppAnalytics.m */; };
 		711BF20119292B94002D2514 /* AppAnalyticsTrackerVCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BF1F919292B94002D2514 /* AppAnalyticsTrackerVCtrl.m */; };
 		711BF20319292BA2002D2514 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 711BF20219292BA2002D2514 /* libGoogleAnalyticsServices.a */; };
@@ -78,6 +79,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		711136CA193EA7740051F0EE /* UIColor+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Category.h"; path = "AppIOS/App/UIColor+Category.h"; sourceTree = SOURCE_ROOT; };
+		711136CB193EA7740051F0EE /* UIColor+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Category.m"; path = "AppIOS/App/UIColor+Category.m"; sourceTree = SOURCE_ROOT; };
 		711BF1F619292B94002D2514 /* AppAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppAnalytics.h; path = AppIOS/Analytics/Google/AppAnalytics.h; sourceTree = SOURCE_ROOT; };
 		711BF1F719292B94002D2514 /* AppAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppAnalytics.m; path = AppIOS/Analytics/Google/AppAnalytics.m; sourceTree = SOURCE_ROOT; };
 		711BF1F819292B94002D2514 /* AppAnalyticsTrackerVCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppAnalyticsTrackerVCtrl.h; path = AppIOS/Analytics/Google/AppAnalyticsTrackerVCtrl.h; sourceTree = SOURCE_ROOT; };
@@ -328,6 +331,8 @@
 				711BF22D19292E90002D2514 /* NSException+Category.m */,
 				711BF22E19292E90002D2514 /* NSString+Category.h */,
 				711BF22F19292E90002D2514 /* NSString+Category.m */,
+				711136CA193EA7740051F0EE /* UIColor+Category.h */,
+				711136CB193EA7740051F0EE /* UIColor+Category.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -559,6 +564,7 @@
 				711BF22019292BE2002D2514 /* DataAccess.m in Sources */,
 				711BF22719292E79002D2514 /* AppViewController.m in Sources */,
 				711BF21D19292BE2002D2514 /* AppDebugLog.m in Sources */,
+				711136CC193EA7740051F0EE /* UIColor+Category.m in Sources */,
 				711BF20019292B94002D2514 /* AppAnalytics.m in Sources */,
 				711BF21E19292BE2002D2514 /* AppManager.m in Sources */,
 				711BF22219292BE2002D2514 /* GTMStackTrace.m in Sources */,
