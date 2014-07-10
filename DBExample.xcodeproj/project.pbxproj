@@ -440,8 +440,8 @@
 			buildPhases = (
 				71225CB91926DAEE00DA1591 /* Sources */,
 				71225CBA1926DAEE00DA1591 /* Frameworks */,
-				7122DB6C1926E380009936A5 /* ShellScript */,
 				71225CBB1926DAEE00DA1591 /* Resources */,
+				7122DB6C1926E380009936A5 /* ShellScript */,
 			);
 			buildRules = (
 			);
