@@ -10,10 +10,6 @@
 //  Developer should define their own meaningful debug logs, like NTXLog for all transmit events, etc.
 //
 
-
-
-
-
 //#define DEBUG
 #ifdef DEBUG
 #    define NDLog(...) NSLog(__VA_ARGS__)

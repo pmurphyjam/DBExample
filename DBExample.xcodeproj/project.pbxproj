@@ -240,7 +240,6 @@
 				1A0406321E75D9D000A03526 /* AppUtilities */,
 				7122DB6E1926E791009936A5 /* Analytics */,
 				7122DB6F1926E7A7009936A5 /* Categories */,
-				7122DB711926E7C2009936A5 /* AppControls */,
 				7122DB701926E7B1009936A5 /* AppModels */,
 				7122DB721926E7D5009936A5 /* DataBase Models */,
 				7122DB741926E7F2009936A5 /* ViewControllers */,
@@ -318,13 +317,6 @@
 				71D688BC192A53B4003155D9 /* DBConstants.m */,
 			);
 			name = AppModels;
-			sourceTree = "<group>";
-		};
-		7122DB711926E7C2009936A5 /* AppControls */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = AppControls;
 			sourceTree = "<group>";
 		};
 		7122DB721926E7D5009936A5 /* DataBase Models */ = {
