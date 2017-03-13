@@ -17,44 +17,50 @@
 #import "AppAnalytics.h"
 #import "AppManager.h"
 #import "SettingsModel.h"
-#import "NSString+Category.h"
-#import "NSDictionary+JSONCategory.h"
-#import "DeviceUtils.h"
-#import "AppDebugLog.h"
 #import <CommonCrypto/CommonDigest.h>
-#import <AdSupport/AdSupport.h>
 
 @implementation AppDelegate
-
-@synthesize operationQueue;
-@synthesize crashDataConnection;
 
 #import "AppConstants.h"
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //Set some fake passwords for now, these are required for SQLCipher and encryption since the passwords
+    //Redefine the DB_FILE names
+    DB_FILE = @"Companies.db";
+    DB_FILEX = @"CompaniesX.db";
+    
+    //Set some fake user for now
+    if(![SettingsModel getLoginState])
+    {
+        [SettingsModel setUserName:@"John Smith"];
+        [SettingsModel setUserId:[NSNumber numberWithInt:1]];
+        [SettingsModel setCountry:@"USA"];
+    }
+    
+    NSString *userName = [SettingsModel getUserName];
+    NSLog(@"AppDelegate : userName = %@",userName);
+    
+#ifdef ENCRYPT
+    //Set this just once! These are required for SQLCipher and encryption since the passwords
     //are always used for the encryption keys plus some salt
-    [SettingsModel setPW0:@"1260793RTgu"];
-    [SettingsModel setDS0:[AppManager getSomeDSfromDate:[NSDate date]]];
-    [SettingsModel setPW1:@"1260793RTgu"];
-    [SettingsModel setDS1:[AppManager getSomeDSfromDate:[NSDate date]]];
+    if(![SettingsModel getLoginState])
+    {
+        [SettingsModel setDBPW0:@"1260793RTgu"];
+        [SettingsModel setDBPW1:@"1260793RTgu"];
+    }
+    [SettingsModel setDBCanEncrypt:YES];
+#endif
+    
     [SettingsModel setLoginState:YES];
-    [SettingsModel setUserName:@"John Smith"];
     [AppManager InitializeAppManager];
     //Open the Database. Typically you wouldn't do this until a user has enter a password first
     //In the login or signin views. Never open the DB with Encryption until you have a password present.
-    [[AppManager DataAccess] openConnection];
-    [self configureAnalytics];
     
-    //Upload CrashData if we have some
-    if([SettingsModel getLoginState])
-    {
-        //If the App crashed it will come here, and see if there is any Stack Traces to upload to the Server
-        BOOL crashDataExists = [AppManager crashDataExists];
-        if(crashDataExists)
-            [self uploadCrashDataInfo];
-    }
+    //Always open the DB when the App initializes, this applys the encryption keys if the DB is encrypted
+    //so the DB can be read, this is only done once, but if called more then once it's no harm since
+    //it will only execute once.
+    [[AppManager SQLDataAccess] openConnection];
+    [self configureAnalytics];
     
     return YES;
 }
@@ -71,47 +77,6 @@
     NSLog(@"Analytics Identifier = %@", analyticsIdentifier);
 }
 
-#pragma mark CrashData
-
--(void)uploadCrashDataInfo
-{
-    NCRLog(@"AppDel : uploadCrashDataInfo ");
-#ifdef DEV
-    NSString *mode = @"dev";
-#else
-    NSString *mode = @"prod";
-#endif
-    NSMutableArray *crashDataArray = [AppManager getCrashData];
-    for(NSDictionary *crashDic in crashDataArray)
-    {
-        NCRLog(@"AppDel : uploadCrashDataInfo : crashDic = %@",crashDic);
-        NSString *messageID = [NSString stringWithFormat:@"%@",[crashDic objectForKey:@"ID"]];
-        NSData *jsonData = [crashDic toJSON];
-        NSString *jsonString = [[NSString alloc] initWithBytes:[jsonData bytes] length:[jsonData length] encoding:NSUTF8StringEncoding];
-        NSString *params =[NSString stringWithFormat:@"mode=%@&session_id=%@&json=%@", mode,[[SettingsModel getSessionID] urlencode], jsonString];
-        NSString *methodStr = [NSString stringWithFormat:@"user/crash/?%@",[SettingsModel getAccountID]];
-        crashDataConnection = [[AppConnectionOperation alloc]initWithRequest:[AppDelegate sendPOSTRequest:params method:methodStr] forConnection:kCRASH_DATA_CONNECTION];
-        [crashDataConnection setMessageID:messageID];
-        [crashDataConnection addObserver:self forKeyPath:@"isFinished" options:NSKeyValueObservingOptionNew context:NULL];
-        [operationQueue addOperation:crashDataConnection];
-    }
-}
-
-+(NSMutableURLRequest*)sendPOSTRequest:(NSString*)params method:(NSString*)method
-{
-    NSURL *url = [NSURL URLWithString:[DeviceUtils getURL:method]];
-    NSString *post = [DeviceUtils getPostHash:params];
-    NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
-	NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
-    [theRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-    [theRequest setValue:[NSString stringWithFormat:@"%d", [postData length]] forHTTPHeaderField:@"Content-Length"];
-    [theRequest setHTTPBody:postData];
-	[theRequest setHTTPMethod:@"POST"];
-	[theRequest setCachePolicy:NSURLRequestReloadIgnoringCacheData];
-	[theRequest setTimeoutInterval:20.0];
-	return theRequest;
-}
-
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -122,6 +87,9 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    //Always Close the Database connection when the App goes down
+    //This secures your data, and makes sure it can't get corrupted
+    [[AppManager SQLDataAccess] closeConnection];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -132,6 +100,7 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [[AppManager SQLDataAccess] openConnection];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -139,77 +108,5 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-//This is used by the AppConnectionOperation. All your Server communication should go here, just create more connection's, and
-//add more else if's for the decode of each, it typically get's quite large.
-//Because these reside in the AppDelegate these connections will always complete, if you do this in a view controller, and the
-//user exits the view during a connection operation the App will likely crash, thus having all of them here is much safer.
-//The same can be achieved with NSURLSession, but this only works on iOS7.0 and above.
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)operation change:(NSDictionary *)change context:(void *)context
-{
-    if ([operation isKindOfClass:[AppConnectionOperation class]])
-    {
-        AppConnectionOperation *appConnectionOperation = (AppConnectionOperation *)operation;
-        NSString *connectionName = [appConnectionOperation connectionName];
-        NSData *data = [appConnectionOperation data];
-        NSString *messageID = [appConnectionOperation messageID];
-        //Not using these so comment them out for now
-        //NSString *errorMessage = [appConnectionOperation errorMessage];
-        //NSDictionary *messageDic = [appConnectionOperation messageDic];
-        //NSMutableArray *messageArray = [appConnectionOperation messageArray];
-        NSError *error = [appConnectionOperation error];
-        BOOL status = [appConnectionOperation status];
-        NDLog(@"AppDelChat : connectionName = %@ ",connectionName);
-        
-        if ([connectionName isEqualToString:kCRASH_DATA_CONNECTION])
-        {
-            if (error != nil)
-            {
-                NSLog(@"AppDelChat : Crash Data Internet Connection Error");
-                [AppDebugLog writeDebugData:[NSString stringWithFormat:@"Crash Data Internet Connection Error"]];
-            }
-            else if (!status)
-            {
-                NSLog(@"AppDelChat : Crash Data Connection Error");
-                [AppDebugLog writeDebugData:[NSString stringWithFormat:@"Crash Data Connection Error"]];
-            }
-            else
-            {
-                //Status Good
-                NSError *err;
-                NSDictionary *json = [NSJSONSerialization
-                                       JSONObjectWithData:data
-                                       options:kNilOptions
-                                       error:&err];
-                
-                if (!json)
-                {
-                    NSLog(@"AppDelChat : CRASH_DATA_CONNECTION : Error parsing JSON: %@ : %@", err,[[NSString alloc] initWithBytes:[data bytes] length:[data length] encoding:NSUTF8StringEncoding]);
-                }
-                else
-                {
-                    NCRLog(@"AppDelChat : CRASH_DATA_CONNECTION : messageID = %@", messageID);
-                    if([json count] > 0)
-                    {
-                        NCRLog(@"AppDelChat : CRASH_DATA_CONNECTION : jsonArray = %@", json);
-                        //All we're looking for is {'status' : 'ok'}
-                        //Then this crash is updated via the ID, and sync_bit = 1 so it's not uploaded again.
-                        if([[json objectForKey:@"status"] isEqualToString:@"ok"])
-                            [AppManager updateCrashData:messageID];
-                    }
-                }
-            }
-        }
-        
-        if ([operation isEqual:crashDataConnection])
-        {
-            //You always need to remove the observer, and do a cancel to properly terminate a connection
-            NCRLog(@"AppDelChat : Get Crash Data Connection Operation : Finished");
-            [crashDataConnection removeObserver:self forKeyPath:@"isFinished"];
-            [crashDataConnection cancel];
-        }
-
-    }//AppConnectionOperation
-    
-}
 
 @end

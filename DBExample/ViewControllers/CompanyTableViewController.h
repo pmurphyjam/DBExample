@@ -8,7 +8,6 @@
 //  Info : Just a simple demo view to display company's.
 //
 #import <UIKit/UIKit.h>
-#import "AppViewController.h"
 #import "AddCompanyViewController.h"
 
 @interface CompanyTableViewController : UITableViewController<UITableViewDataSource,UITableViewDelegate,AddCompanyDelegate>

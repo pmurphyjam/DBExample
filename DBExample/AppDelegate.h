@@ -7,20 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AppConnectionOperation.h"
 
 #define AppDelegates (AppDelegate *)[[UIApplication sharedApplication] delegate]
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 {
-    NSOperationQueue *operationQueue;
-    AppConnectionOperation *crashDataConnection;
 }
 
 @property (strong, nonatomic) UIWindow *window;
-@property (nonatomic, strong) NSOperationQueue *operationQueue;
-@property (nonatomic, strong) AppConnectionOperation *crashDataConnection;
-
-+(NSMutableURLRequest*)sendPOSTRequest:(NSString*)params method:(NSString*)method;
 
 @end

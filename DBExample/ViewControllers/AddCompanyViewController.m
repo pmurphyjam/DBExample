@@ -9,7 +9,6 @@
 #import "AddCompanyViewController.h"
 #import "AppAnalytics.h"
 #import "AppManager.h"
-#import "AppDebugLog.h"
 #import "SettingsModel.h"
 
 @interface AddCompanyViewController ()
@@ -17,6 +16,8 @@
 @end
 
 @implementation AddCompanyViewController
+
+#import "DBConstants.h"
 
 @synthesize delegate,nameTextField,addressTextField,phoneTextField,cityTextField,stateTextField,countryTextField,companyToEdit;
 
@@ -171,8 +172,6 @@
 //Keep this last in the file
 - (void)didReceiveMemoryWarning
 {
-    [AppManager currentMemoryConsumption:[NSString stringWithUTF8String:__PRETTY_FUNCTION__]];
-    [AppDebugLog writeDebugData:[NSString stringWithFormat:@"AddCompanyVCtrl : didReceiveMemoryWarning"]];
     NSLog(@"AddCompanyVCtrl : didReceiveMemoryWarning : ERROR");
     [super didReceiveMemoryWarning];
 }

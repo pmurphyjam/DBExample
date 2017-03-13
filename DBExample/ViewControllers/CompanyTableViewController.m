@@ -11,7 +11,6 @@
 #import "AppManager.h"
 #import "CompanyModel.h"
 #import "CompanyObject.h"
-#import "AppDebugLog.h"
 #import "SettingsModel.h"
 
 @interface CompanyTableViewController ()
@@ -28,6 +27,7 @@
 
 //#define DEBUG
 #import "AppConstants.h"
+#import "DBConstants.h"
 
 - (void)viewDidLoad
 {
@@ -178,8 +178,6 @@
 //Keep this last in the file
 - (void)didReceiveMemoryWarning
 {
-    [AppManager currentMemoryConsumption:[NSString stringWithUTF8String:__PRETTY_FUNCTION__]];
-    [AppDebugLog writeDebugData:[NSString stringWithFormat:@"CompanyVCtrl : didReceiveMemoryWarning"]];
     NSLog(@"CompanyVCtrl : didReceiveMemoryWarning : ERROR");
     [super didReceiveMemoryWarning];
 }

@@ -14,21 +14,10 @@
 #import <UIKit/UIKit.h>
 
 #import "AppDelegate.h"
-#import "NSException+Category.h"
 
 int main(int argc, char * argv[])
 {
-    @autoreleasepool
-    {
-        int appInt = 0;
-        @try
-        {
-            appInt = UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-        }
-        @catch (NSException *exception)
-        {
-            [exception saveExceptionData];
-        }
-        return appInt;
+    @autoreleasepool {
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }

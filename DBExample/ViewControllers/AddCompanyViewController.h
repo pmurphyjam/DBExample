@@ -10,7 +10,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AppViewController.h"
 #import "CompanyModel.h"
 #import "CompanyObject.h"
 
