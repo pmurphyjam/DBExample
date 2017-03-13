@@ -9,8 +9,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 This Application uses CocoaPods, the Podfile is located in the main directory.
 You must install CocoaPods, and then run the command in the terminal window in the DBExample directory:
->pod install;
->pod update;
+    >pod install;
+    >pod update;
 
 The Podfile will install Google Analytics and SQLDataAccess which performs all of your database accesses to the
 Contacts.db database using SQLite. The SQLDataAccess class uses the SQLite library libsqlite3.tbd.
